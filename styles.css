@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    min-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-bottom: 2rem;
+}
+
+.container.show {
+    opacity: 1;
+}
+
+.container.scale {
+    transform: scale(1.02);
+    transition: transform 0.15s;
+}
+
+.calc-btn {
+    display: none;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.about {
+    margin-bottom: 2rem;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #595959;
+}
+
+.about a {
+    display: flex;
+    color: #595959;
+    text-decoration: none;
+}
+
+.about span {
+    margin-right: 0.5rem;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+input {
+    display: block;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.person.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input[type="text"] {
+    flex: 3;
+    margin-right: 0.5rem;
+    width: calc(66% - 0.5rem);
+}
+
+input[type="number"] {
+    flex: 1;
+    margin-right: 0.5rem;
+    width: calc(33% - 0.5rem);
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.remove-btn:hover {
+    background-color: transparent;
+}
+
+.field-descriptions {
+    display: none;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin-right: 1.75rem;
+    font-size: 18px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+}
+
+#peopleContainer {
+    margin-bottom: 1rem;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.help-icon {
+    display: inline-block;
+    background-color: #808082;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(63, 63, 63, 0.87);
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin-top: 4px;
+}
+
+.copy-btn {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.copy-btn:hover {
+    background-color: #218838;
+}
+
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    margin: 0.2rem 0;
+}
+
+@media screen and (max-width: 375px) {
+    .field-descriptions {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        margin-right: 0.2rem;
+    }
+}
+
+.results {
+    margin: 0.5rem 0;
+}

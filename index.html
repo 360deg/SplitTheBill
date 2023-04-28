@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split the Bill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Split the Bill</h1>
+        <div>
+            <span class="help-icon" id="helpIcon">?</span>
+            <div class="tooltip" id="tooltip">
+                This is a simple project that helps users split the bill among multiple participants. You can add people to the list, enter the amount spent by each person, and specify how many people they are paying for. The app will then calculate the total amount and display the transactions required to balance the payments.
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="field-descriptions" id="fieldDescriptions">
+            <span style="width: calc(65% - 0.5rem);">Name</span>
+            <span style="width: calc(25% - 0.5rem);">Spent</span>
+            <span style="width: calc(24% - 0.5rem);">Paying For</span>
+        </div>
+        <div id="peopleContainer"></div>
+        <div class="actions">
+            <button id="addPerson">Add Person</button>
+            <button id="calculate" class="calc-btn" disabled>Calculate</button>
+        </div>
+        <div class="results" id="total"></div>
+        <div class="results" id="result"></div>
+        <div class="results" id="transactions"></div>
+        <button id="copyButton" class="copy-btn" style="display: none;">Copy to Clipboard</button>
+    </div>
+    <div class="about">
+        <span>Developed by </span><a href="https://github.com/360deg"><img src="github.svg" alt="GitHub" class="github-icon" />Vlad Pecherytsia</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
